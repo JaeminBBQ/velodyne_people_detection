@@ -59,7 +59,7 @@ class DemoDataset(DatasetTemplate):
 class Detector:
     def __init__(self):
         rospy.init_node('poopoo')
-        rospy.Subscriber('/velodyne_points', PointCloud2, self.pointcloud_callback)
+
         self.marker_pub = rospy.Publisher('/poo_poo', Marker, queue_size=10)
 
         cfg_file = "/OpenPCDet/output/OpenPCDet/tools/cfgs/custom_models/pointpillar/default/pointpillar.yaml"
@@ -78,6 +78,8 @@ class Detector:
         self.model.load_params_from_file(filename=ckpt, logger=logger, to_cpu=True)
         self.model.cuda()
         self.model.eval()
+
+        rospy.Subscriber('/velodyne_points', PointCloud2, self.pointcloud_callback)
 
     def publish_box(self, box, score, label, marker_id=0):
         x, y, z, dx, dy, dz, yaw = box

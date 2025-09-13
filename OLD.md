@@ -28,4 +28,4 @@ python3 tools/demo.py --cfg_file /OpenPCDet/output/OpenPCDet/tools/cfgs/custom_m
 
 export PYTHONPATH=$PYTHONPATH:/OpenPCDet 
 
-docker cp /home/jaeminbbq/Projects/rosenv/OpenPCDet/poopoo.py noetic_gpu:/OpenPCDet/tools
+sudo docker cp /home/jaeminbbq/Projects/rosenv/OpenPCDet/poopoo.py noetic_gpu:/OpenPCDet/tools
