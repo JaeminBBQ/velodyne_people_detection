@@ -1,1 +1,1 @@
-docker run --net=host -d core
+sudo docker run --net=host -d core

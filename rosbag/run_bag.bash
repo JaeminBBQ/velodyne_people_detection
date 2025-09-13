@@ -1,1 +1,1 @@
-docker run --net=host -d bag
+sudo docker run --net=host -d bag
