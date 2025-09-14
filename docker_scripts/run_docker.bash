@@ -2,7 +2,7 @@ xhost local:root
 
 XAUTH=/tmp/.docker.xauth
 
-sudo docker run -it \
+sudo docker run --rm -it \
     --name=noetic \
     --env="DISPLAY=$DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \

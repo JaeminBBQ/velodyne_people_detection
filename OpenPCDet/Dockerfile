@@ -29,7 +29,8 @@ RUN pip install SharedArray
 
 RUN git clone https://github.com/open-mmlab/OpenPCDet.git
 
-ENV TORCH_CUDA_ARCH_LIST="8.6"
+# ENV TORCH_CUDA_ARCH_LIST="8.6"
+ENV TORCH_CUDA_ARCH_LIST="7.5"
 ENV PYTHONPATH=/OpenPCDet
 
 WORKDIR /OpenPCDet
